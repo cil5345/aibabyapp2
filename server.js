@@ -26,6 +26,8 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.set('view engine', 'ejs')
 
+const PORT = process.env.PORT || 8080
+
 
 // app.get('/', (req,res) => {
 //   console.log('hello')
@@ -63,6 +65,6 @@ app.post("/dream", async (req, res) => {
 
 });
 
-app.listen(8080, () =>
+app.listen(PORT, () =>
   console.log("message has been sent to http://localhost:8080/dream")
 );
